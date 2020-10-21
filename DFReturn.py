@@ -6,25 +6,45 @@ Created on Tue Oct  6 22:29:19 2020
 """
 
 
-import Ondemand
+
 import pandas as pd
-from datetime import date
-
-today = date.today()
-
-weekAgo = date(year = today.year, month=today.month, day=today.day-7)
-weekDate = weekAgo.strftime("%Y%m%d")
-
-symbol = input("Enter Stock Symbol: ")
+from datetime import date, timedelta
+import Ondemand
+from Config import api_key, end_point
 
 
-od = Ondemand.OnDemandClient(api_key='837a2c6b0793be83405c5cb5da6d0c49', end_point='https://marketdata.websol.barchart.com/')
-
-# get quote data for Apple and Microsoft#
-quotes = od.quote(symbol)['results']
-todayDF = pd.DataFrame.from_dict(quotes)
+od = Ondemand.OnDemandClient(api_key, end_point)
 
 
-weekHistory = od.history(symbol, 'daily', startDate=weekDate)['results']
+Symbol = input("Enter Stock Symbol: ")
+Symbol.upper()
+daysPast = input("Enter desired previous Days for analysis: ")
+while True:
+    try:
+        daysPast = float(daysPast)
+        break
+    except ValueError:
+        daysPast = input("Please enter desired Days again: ")
 
-historyDF = pd.DataFrame.from_dict(weekHistory)
+def currentData(s):
+    
+    quotes = od.quote(s)['results']
+    df = pd.DataFrame.from_dict(quotes)
+
+    return (df)
+
+
+def historicData(s, dP):
+    today = date.today()
+    pDate = today- timedelta(days=dP)
+    sDate = date(year = pDate.year, month=pDate.month, day=pDate.day)
+    sDate = sDate.strftime("%Y%m%d")
+    weekHistory = od.history(s, 'daily', startDate=sDate)['results']
+    df = pd.DataFrame.from_dict(weekHistory)
+
+    return (df)
+
+
+todayDF = currentData(Symbol)
+historyDF = historicData(Symbol, daysPast)
+
