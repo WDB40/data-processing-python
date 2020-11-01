@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "67c1b2fa-613d-48f0-85ef-62fa0077d657",
+		"name": "DPP Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "With 3 Inputs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=INTC",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"stockpred"
+					],
+					"query": [
+						{
+							"key": "Input1",
+							"value": "AAPL"
+						},
+						{
+							"key": "Input2",
+							"value": "MSFT"
+						},
+						{
+							"key": "Input3",
+							"value": "INTC"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With 5 Inputs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=TSLA&Input4=GOOG&Input5=INTC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"stockpred"
+					],
+					"query": [
+						{
+							"key": "Input1",
+							"value": "AAPL"
+						},
+						{
+							"key": "Input2",
+							"value": "MSFT"
+						},
+						{
+							"key": "Input3",
+							"value": "TSLA"
+						},
+						{
+							"key": "Input4",
+							"value": "GOOG"
+						},
+						{
+							"key": "Input5",
+							"value": "INTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With 10 Inputs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=GLW&Input4=GOOG&Input5=INTC&Input6=FB&Input7=TSLA&Input8=LUV&Input9=XOM&Input10=BABA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"stockpred"
+					],
+					"query": [
+						{
+							"key": "Input1",
+							"value": "AAPL"
+						},
+						{
+							"key": "Input2",
+							"value": "MSFT"
+						},
+						{
+							"key": "Input3",
+							"value": "GLW"
+						},
+						{
+							"key": "Input4",
+							"value": "GOOG"
+						},
+						{
+							"key": "Input5",
+							"value": "INTC"
+						},
+						{
+							"key": "Input6",
+							"value": "FB"
+						},
+						{
+							"key": "Input7",
+							"value": "TSLA"
+						},
+						{
+							"key": "Input8",
+							"value": "LUV"
+						},
+						{
+							"key": "Input9",
+							"value": "XOM"
+						},
+						{
+							"key": "Input10",
+							"value": "BABA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
