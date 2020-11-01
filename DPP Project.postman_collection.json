@@ -11,13 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=INTC",
+					"raw": "http://127.0.0.1:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=INTC",
 					"protocol": "http",
 					"host": [
+						"127",
 						"0",
 						"0",
-						"0",
-						"0"
+						"1"
 					],
 					"port": "5000",
 					"path": [
