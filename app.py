@@ -152,14 +152,14 @@ class DataModeler():
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
         
         model= self.createLinearRegression(X_train, y_train)
-        #self.testLinearRegression(model, X_train, X_test, y_train, y_test)
+        self.testLinearRegression(model, X_train, X_test, y_train, y_test)
         
         return model
     
     def getAllModels(self, data_set):
         models = {}
         for key, history in data_set.items():
-            #print("For: {}".format(key))
+            print("For: {}".format(key))
             models[key] = self.conductLinearRegressionAnalysis(history)
         
         return models
@@ -204,7 +204,7 @@ class stockpred(Resource):
         predictor = Predictor(features, selected_history, models)
         recommendation = predictor.getRecommendation()
         
-        return recommendation[0]
+        return json.dumps(recommendation)
 
 
 

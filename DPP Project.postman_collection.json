@@ -57,7 +57,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=TSLA&Input4=GOOG&Input5=INTC",
+					"raw": "http://127.0.0.1:5000/stockpred?Input1=AAPL&Input2=MSFT&Input3=XOM&Input4=GOOG&Input5=INTC",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -80,7 +80,7 @@
 						},
 						{
 							"key": "Input3",
-							"value": "TSLA"
+							"value": "XOM"
 						},
 						{
 							"key": "Input4",
