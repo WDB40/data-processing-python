@@ -17,4 +17,4 @@ This notebook goes through the model creation process for this project. There ar
 This is the application file that is used to run the applicaiton and make it accessible via an api. Since our models are created real time when the user hits our endpoints, we have much of what is covered in the previous two notebooks in this file as well.
 
 ### DPP Project.postman_collection.json
-This file contains the 3 example calls to the app once it is running. It contains examples with 3, 5, and 10 different stocks as input.
+This file contains the 3 example calls to the app once it is running. It contains examples with 3, 5, and 10 different stocks as input. You can add and change tickers as you would like. The variable names in postman do not matter, but the tickers should be valid tickers.
