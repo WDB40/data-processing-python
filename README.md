@@ -1,6 +1,9 @@
 # data-processing-python
 Repository for the Data Processing in Python class project at the University of Iowa.
 
+## Unqiue Installs Required
+pip install yfinance
+
 The project contains 4 main files:
 
 ## Gathering Data.ipynb
